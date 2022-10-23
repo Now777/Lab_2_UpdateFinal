@@ -1,0 +1,477 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:orientation=\"vertical\"\r\n    tools:context=\".MainActivity\">\r\n\r\n    <ListView\r\n        android:id=\"@+id/theListView\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_marginTop=\"40dp\"\r\n        android:layout_marginBottom=\"55dp\"\r\n        android:padding=\"10dp\" />\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_alignParentBottom=\"true\"\r\n        android:orientation=\"horizontal\">\r\n\r\n        <EditText\r\n            android:id=\"@+id/editText\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"40dp\"\r\n            android:layout_weight=\"2\"\r\n            android:hint=\"@string/hint\"\r\n            tools:ignore=\"MissingConstraints\" />\r\n        <Switch\r\n            android:id=\"@+id/switch2\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"36dp\"\r\n            android:layout_weight=\"1\"\r\n            android:text=\"@string/toggle\" />\r\n        <Button android:id=\"@+id/myButton\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"40dp\"\r\n            android:layout_weight=\"1\"\r\n            android:backgroundTint=\"@color/purple_500\"\r\n            android:text=\"@string/myButton\" />\r\n    </LinearLayout> </RelativeLayout>\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision e4a940309d4dd9aa5215a3b5ffdb2ca412ed3b7f)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1666153219842)
+@@ -5,7 +5,7 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+-    tools:context=".MainActivity">
++    tools:context=".FirstActivity">
+ 
+     <ListView
+         android:id="@+id/theListView"
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m__[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m__[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m__[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m__[Changes]/shelved.patch	(revision e4a940309d4dd9aa5215a3b5ffdb2ca412ed3b7f)
++++ /dev/null	(revision e4a940309d4dd9aa5215a3b5ffdb2ca412ed3b7f)
+@@ -1,37 +0,0 @@
+-Index: .idea/runConfigurations.xml
+-===================================================================
+-diff --git a/.idea/runConfigurations.xml b/.idea/runConfigurations.xml
+-deleted file mode 100644
+---- a/.idea/runConfigurations.xml	(revision eec79178952ded97b234473842fbcf4e4feac822)
+-+++ /dev/null	(revision eec79178952ded97b234473842fbcf4e4feac822)
+-@@ -1,12 +0,0 @@
+--<?xml version="1.0" encoding="UTF-8"?>
+--<project version="4">
+--  <component name="RunConfigurationProducerService">
+--    <option name="ignoredProducers">
+--      <set>
+--        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />
+--        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />
+--        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />
+--      </set>
+--    </option>
+--  </component>
+--</project>
+-\ No newline at end of file
+-Index: .idea/gradle.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"GRADLE\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"gradleJvm\" value=\"11\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+---- a/.idea/gradle.xml	(revision eec79178952ded97b234473842fbcf4e4feac822)
+-+++ b/.idea/gradle.xml	(date 1664899336649)
+-@@ -1,5 +1,6 @@
+- <?xml version="1.0" encoding="UTF-8"?>
+- <project version="4">
+-+  <component name="GradleMigrationSettings" migrationVersion="1" />
+-   <component name="GradleSettings">
+-     <option name="linkedExternalProjectsSettings">
+-       <GradleProjectSettings>
+Index: app/src/main/java/com/example/inclassexamples_w20/MainActivity.java
+===================================================================
+diff --git a/app/src/main/java/com/example/inclassexamples_w20/MainActivity.java b/app/src/main/java/com/example/inclassexamples_w20/MainActivity.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/inclassexamples_w20/MainActivity.java	(revision e4a940309d4dd9aa5215a3b5ffdb2ca412ed3b7f)
++++ /dev/null	(revision e4a940309d4dd9aa5215a3b5ffdb2ca412ed3b7f)
+@@ -1,104 +0,0 @@
+-package com.example.inclassexamples_w20;
+-
+-import androidx.appcompat.app.AlertDialog;
+-import androidx.appcompat.app.AppCompatActivity;
+-import androidx.collection.CircularArray;
+-
+-import android.graphics.Color;
+-import android.os.Bundle;
+-import android.view.LayoutInflater;
+-import android.widget.ListView;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.BaseAdapter;
+-import android.widget.Button;
+-import android.widget.EditText;
+-import android.widget.Switch;
+-import android.widget.TextView;
+-import java.util.ArrayList;
+-
+-public class MainActivity extends AppCompatActivity {
+-
+-    private ArrayList<TODO> elements;
+-    private MyListAdapter myAdapter;
+-    TODO todo;
+-    class TODO {
+-        String todoText;
+-        boolean isUrgent;
+-        public String getTodoText() { return
+-                todoText; }
+-        public void setTodoText(String todoText) { this.todoText = todoText; }
+-        public boolean getIsUrgent() { return isUrgent; }
+-        public void setUrgent(boolean urgent) { isUrgent = urgent; } }
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_main);
+-        EditText editText = (EditText) findViewById(R.id.editText);
+-        Switch swUrgernt = findViewById(R.id.switch2);
+-        Button addButton = findViewById(R.id.myButton);
+-        elements = new ArrayList<>();
+-        addButton.setOnClickListener(click -> {String listItem = editText.getText().toString();
+-        todo = new TODO();
+-        todo.setTodoText(listItem);
+-        todo.setUrgent(swUrgernt.isChecked());
+-        elements.add(todo);
+-
+-        myAdapter.notifyDataSetChanged();
+-        editText.setText("");
+-        swUrgernt.setChecked(false); });
+-
+-    }
+-    ListView myList = findViewById(R.id.theListView);
+-       myList.setAdapter(myAdapter = new MyListAdapter());
+-
+-              myList.setOnItemLongClickListener((p, b, pos, id)->{ View newView =
+-                  getLayoutInflater().inflate(R.layout.todo, null);
+-                  TextView tView = newView.findViewById(R.id.textGoesHere);
+-
+-               AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+-               tView.setText(elements.get(pos).getTodoText());
+-
+-               alertDialogBuilder.setTitle("Do you want to delete this?");
+-                .setMessage("The selected row is: " + pos + "\n " + elements.get(pos).todoText)
+-                .setPositiveButton("Yes", (click, arg) -> { elements.remove(elements.get(pos));
+-                    myAdapter.notifyDataSetChanged(); })
+-                .setNegativeButton("No", (click, arg) -> { }).setView(newView).create().show();
+-               return true; }); }
+-
+-                     private class MyListAdapter extends BaseAdapter {
+-                     public int getCount() { return elements.size(); }
+-                     public Object getItem(int position) {
+-                         
+-                         return elements.get(position); }
+-                     public long getItemId(int position) {return (long) position; }
+-                     public View getView(int position, View old, ViewGroup parent) {
+-                       View newView = old;
+-                       LayoutInflater inflater = getLayoutInflater();
+-                       if (newView == null) {
+-                           newView = inflater.inflate(R.layout.todo, parent, false); }
+-
+-                           TextView tView = newView.findViewById(R.id.textGoesHere);
+-                           tView.setText(getItem(position).todoText);
+-
+-                       if (getItem(position).isUrgent) {
+-                           tView.setBackgroundColor(Color.RED);
+-
+-                           tView.setTextColor(Color.WHITE); }
+-                       else {
+-
+-                           tView.setBackgroundColor(Color.WHITE);
+-                           tView.setTextColor(Color.GRAY); }
+-
+-                       return newView;
+-
+-                     }
+-       }
+-
+-
+-
+-
+-
+-
+-
+-
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m___Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m___Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m___Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m___Changes_.xml	(revision e4a940309d4dd9aa5215a3b5ffdb2ca412ed3b7f)
++++ /dev/null	(revision e4a940309d4dd9aa5215a3b5ffdb2ca412ed3b7f)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m__[Changes]" date="1665208504054" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-10-08_1_55_a_m__[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2022-10-08 1:55 a.m. [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: app/src/main/res/layout/row_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/row_layout.xml b/app/src/main/res/layout/row_layout.xml
+new file mode 100644
+--- /dev/null	(date 1666142149591)
++++ b/app/src/main/res/layout/row_layout.xml	(date 1666142149591)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:orientation="vertical" android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <TextView
++        android:layout_height="wrap_content"
++        android:layout_width="match_parent"
++        android:id="@+id/textGoesHere" />
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/color/purple_500.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/color/purple_500.xml b/app/src/main/res/color/purple_500.xml
+new file mode 100644
+--- /dev/null	(date 1666142366203)
++++ b/app/src/main/res/color/purple_500.xml	(date 1666142366203)
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="utf-8"?>
++<selector xmlns:android="http://schemas.android.com/apk/res/android">
++
++</selector>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CMakeSettings\">\r\n    <configurations>\r\n      <configuration PROFILE_NAME=\"Debug\" CONFIG_NAME=\"Debug\" />\r\n    </configurations>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" project-jdk-name=\"1.8 (1)\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision e4a940309d4dd9aa5215a3b5ffdb2ca412ed3b7f)
++++ b/.idea/misc.xml	(date 1666389840909)
+@@ -5,7 +5,11 @@
+       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+     </configurations>
+   </component>
++<<<<<<< HEAD
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8 (1)" project-jdk-type="JavaSDK">
++=======
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="JDK" project-jdk-type="JavaSDK">
++>>>>>>> f0eb93b (week 4 examples)
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/java/com/example/inclassexamples_w20/MyOpener.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/inclassexamples_w20/MyOpener.java b/app/src/main/java/com/example/inclassexamples_w20/MyOpener.java
+new file mode 100644
+--- /dev/null	(date 1666151603119)
++++ b/app/src/main/java/com/example/inclassexamples_w20/MyOpener.java	(date 1666151603119)
+@@ -0,0 +1,50 @@
++package com.example.inclassexamples_w20;
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++import android.database.sqlite.SQLiteOpenHelper;
++
++
++public class MyOpener extends SQLiteOpenHelper {
++
++    protected final static String DATABASE_NAME = "TodoItemsDB";
++    protected final static int VERSION_NUM = 1;
++    public final static String TABLE_NAME = "TodoItemsList";
++    public final static String COL_ITEMS = "TodoItems";
++    public final static String COL_ID = "_id";
++
++    public MyOpener(Context ctx)
++    {
++        super(ctx, DATABASE_NAME, null, VERSION_NUM);
++    }
++
++
++    //This function gets called if no database file exists.
++    //Look on your device in the /data/data/package-name/database directory.
++    @Override
++    public void onCreate(SQLiteDatabase db)
++    {
++        db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
++                + COL_ITEMS + " text);");  // add or remove columns
++    }
++
++
++    //this function gets called if the database version on your device is lower than VERSION_NUM
++    @Override
++    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
++    {   //Drop the old table:
++        db.execSQL( "DROP TABLE IF EXISTS " + TABLE_NAME);
++
++        //Create the new table:
++        onCreate(db);
++    }
++
++    //this function gets called if the database version on your device is higher than VERSION_NUM
++    @Override
++    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion)
++    {   //Drop the old table:
++        db.execSQL( "DROP TABLE IF EXISTS " + TABLE_NAME);
++
++        //Create the new table:
++        onCreate(db);
++    }
++}
+Index: app/src/main/java/com/example/inclassexamples_w20/MyListAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/inclassexamples_w20/MyListAdapter.java b/app/src/main/java/com/example/inclassexamples_w20/MyListAdapter.java
+new file mode 100644
+--- /dev/null	(date 1666152996157)
++++ b/app/src/main/java/com/example/inclassexamples_w20/MyListAdapter.java	(date 1666152996157)
+@@ -0,0 +1,97 @@
++package com.example.inclassexamples_w20;
++
++import android.graphics.Color;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.BaseAdapter;
++import android.widget.TextView;
++
++import androidx.collection.CircularArray;
++
++import java.io.ByteArrayOutputStream;
++
++public class MyListAdapter extends BaseAdapter {
++    public int getCount() {
++        ByteArrayOutputStream elements = null;
++        return elements.size();
++    }
++
++    public Object getItem(int position) {
++
++        CircularArray<Object> elements = null;
++        return elements.get(position);
++    }
++
++    public long getItemId(int position) {
++        return (long) position;
++    }
++
++    public View getView(int position, View old, ViewGroup parent) {
++        View newView = old;
++        LayoutInflater inflater = getLayoutInflater();
++        if (newView == null) {
++            newView = inflater.inflate(R.layout.todo, parent, false);
++        }
++
++        TextView tView = newView.findViewById(R.id.textGoesHere);
++        tView.setText(getItem(position).TodoItems);
++
++        if (getItem(position).isUrgent) {
++            tView.setBackgroundColor(Color.RED);
++
++            tView.setTextColor(Color.WHITE);
++        } else {
++
++            tView.setBackgroundColor(Color.WHITE);
++            tView.setTextColor(Color.GRAY);
++        }
++
++        return newView;
++
++    }
++
++    private LayoutInflater getLayoutInflater() {
++        return null;
++    }
++
++    public class TodoItems {
++
++        //Android Studio hint: to create getter and setter, put mouse on variable and
++        // click "alt+insert" in Windows, "control+return" on Macintosh
++        protected String email, name;
++        protected long id;
++
++        /**
++         * Constructor:
++         */
++        public TodoItems(String n, long i) {
++            name = n;
++
++            id = i;
++        }
++
++        public void updateTodoItems(String n) {
++            name = n;
++
++        }
++
++        /**
++         * Chaining constructor:
++         */
++        public TodoItems(String n) {
++            this(n, 0);
++        }
++
++
++        public String getTodoItems() {
++            return name;
++        }
++
++        public long getId() {
++            return id;
++        }
++
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/inclassexamples_w20/FirstActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/inclassexamples_w20/FirstActivity.java b/app/src/main/java/com/example/inclassexamples_w20/FirstActivity.java
+new file mode 100644
+--- /dev/null	(date 1666155849579)
++++ b/app/src/main/java/com/example/inclassexamples_w20/FirstActivity.java	(date 1666155849579)
+@@ -0,0 +1,55 @@
++package com.example.inclassexamples_w20;
++
++import androidx.appcompat.app.AppCompatActivity;
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.BaseAdapter;
++import android.widget.ListView;
++import android.widget.TextView;
++
++import java.util.ArrayList;
++import java.util.Arrays;
++import java.util.List;
++
++public class FirstActivity extends AppCompatActivity {
++    private ArrayList<String> elements = new ArrayList<>( Arrays.asList( /*Empty*/ ) );
++    private MyListAdapter myAdapter;
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++
++        // setContentView loads objects onto the screen.
++        // Before this function, the screen is empty.
++        setContentView(R.layout.activity_main);
++
++        ListView myList = findViewById(R.id.theListView);
++        myList.setAdapter( myAdapter = new MyListAdapter());
++    }
++
++    private class MyListAdapter extends BaseAdapter{
++
++        public int getCount() { return elements.size();}
++
++        public Object getItem(int position) { return "This is row " + position; }
++
++        public long getItemId(int position) { return (long) position; }
++
++        public View getView(int position, View old, ViewGroup parent)
++        {
++            LayoutInflater inflater = getLayoutInflater();
++
++            //make a new row:
++            View newView = inflater.inflate(R.layout.row_layout, parent, false);
++
++            //set what the text should be for this row:
++            TextView tView = newView.findViewById(R.id.textGoesHere);
++            tView.setText( getItem(position).toString() );
++
++            //return it to be put in the table
++            return newView;
++        }
++    }
++}

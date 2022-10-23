@@ -1,0 +1,226 @@
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <compositeConfiguration>\r\n          <compositeBuild compositeDefinitionSource=\"SCRIPT\" />\r\n        </compositeConfiguration>\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n        <option name=\"testRunner\" value=\"PLATFORM\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+--- a/.idea/gradle.xml	
++++ b/.idea/gradle.xml	
+@@ -6,10 +6,9 @@
+         <compositeConfiguration>
+           <compositeBuild compositeDefinitionSource="SCRIPT" />
+         </compositeConfiguration>
++        <option name="testRunner" value="GRADLE" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+-        <option name="resolveModulePerSourceSet" value="false" />
+-        <option name="testRunner" value="PLATFORM" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: app/src/main/res/color/purple_500.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/color/purple_500.xml b/app/src/main/res/color/purple_500.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/color/purple_500.xml	
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="utf-8"?>
++<selector xmlns:android="http://schemas.android.com/apk/res/android">
++
++</selector>
+\ No newline at end of file
+Index: app/src/main/res/layout/row_layout.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/row_layout.xml b/app/src/main/res/layout/row_layout.xml
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/res/layout/row_layout.xml	
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:orientation="vertical" android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++    <TextView
++        android:layout_height="wrap_content"
++        android:layout_width="match_parent"
++        android:id="@+id/textGoesHere" />
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/inclassexamples_w20/MyOpener.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/inclassexamples_w20/MyOpener.java b/app/src/main/java/com/example/inclassexamples_w20/MyOpener.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/inclassexamples_w20/MyOpener.java	
+@@ -0,0 +1,50 @@
++package com.example.inclassexamples_w20;
++import android.content.Context;
++import android.database.sqlite.SQLiteDatabase;
++import android.database.sqlite.SQLiteOpenHelper;
++
++
++public class MyOpener extends SQLiteOpenHelper {
++
++    protected final static String DATABASE_NAME = "TodoItemsDB";
++    protected final static int VERSION_NUM = 1;
++    public final static String TABLE_NAME = "TodoItemsList";
++    public final static String COL_ITEMS = "TodoItems";
++    public final static String COL_ID = "_id";
++
++    public MyOpener(Context ctx)
++    {
++        super(ctx, DATABASE_NAME, null, VERSION_NUM);
++    }
++
++
++    //This function gets called if no database file exists.
++    //Look on your device in the /data/data/package-name/database directory.
++    @Override
++    public void onCreate(SQLiteDatabase db)
++    {
++        db.execSQL("CREATE TABLE " + TABLE_NAME + " (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
++                + COL_ITEMS + " text);");  // add or remove columns
++    }
++
++
++    //this function gets called if the database version on your device is lower than VERSION_NUM
++    @Override
++    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
++    {   //Drop the old table:
++        db.execSQL( "DROP TABLE IF EXISTS " + TABLE_NAME);
++
++        //Create the new table:
++        onCreate(db);
++    }
++
++    //this function gets called if the database version on your device is higher than VERSION_NUM
++    @Override
++    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion)
++    {   //Drop the old table:
++        db.execSQL( "DROP TABLE IF EXISTS " + TABLE_NAME);
++
++        //Create the new table:
++        onCreate(db);
++    }
++}
+Index: app/src/main/java/com/example/inclassexamples_w20/MyListAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/inclassexamples_w20/MyListAdapter.java b/app/src/main/java/com/example/inclassexamples_w20/MyListAdapter.java
+new file mode 100644
+--- /dev/null	
++++ b/app/src/main/java/com/example/inclassexamples_w20/MyListAdapter.java	
+@@ -0,0 +1,97 @@
++package com.example.inclassexamples_w20;
++
++import android.graphics.Color;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.BaseAdapter;
++import android.widget.TextView;
++
++import androidx.collection.CircularArray;
++
++import java.io.ByteArrayOutputStream;
++
++public class MyListAdapter extends BaseAdapter {
++    public int getCount() {
++        ByteArrayOutputStream elements = null;
++        return elements.size();
++    }
++
++    public Object getItem(int position) {
++
++        CircularArray<Object> elements = null;
++        return elements.get(position);
++    }
++
++    public long getItemId(int position) {
++        return (long) position;
++    }
++
++    public View getView(int position, View old, ViewGroup parent) {
++        View newView = old;
++        LayoutInflater inflater = getLayoutInflater();
++        if (newView == null) {
++            newView = inflater.inflate(R.layout.todo, parent, false);
++        }
++
++        TextView tView = newView.findViewById(R.id.textGoesHere);
++        tView.setText(getItem(position).TodoItems);
++
++        if (getItem(position).isUrgent) {
++            tView.setBackgroundColor(Color.RED);
++
++            tView.setTextColor(Color.WHITE);
++        } else {
++
++            tView.setBackgroundColor(Color.WHITE);
++            tView.setTextColor(Color.GRAY);
++        }
++
++        return newView;
++
++    }
++
++    private LayoutInflater getLayoutInflater() {
++        return null;
++    }
++
++    public class TodoItems {
++
++        //Android Studio hint: to create getter and setter, put mouse on variable and
++        // click "alt+insert" in Windows, "control+return" on Macintosh
++        protected String email, name;
++        protected long id;
++
++        /**
++         * Constructor:
++         */
++        public TodoItems(String n, long i) {
++            name = n;
++
++            id = i;
++        }
++
++        public void updateTodoItems(String n) {
++            name = n;
++
++        }
++
++        /**
++         * Chaining constructor:
++         */
++        public TodoItems(String n) {
++            this(n, 0);
++        }
++
++
++        public String getTodoItems() {
++            return name;
++        }
++
++        public long getId() {
++            return id;
++        }
++
++
++    }
++}
+\ No newline at end of file
